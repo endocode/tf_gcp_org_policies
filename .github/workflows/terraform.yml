@@ -26,10 +26,10 @@ jobs:
         terraform_version: 1.0.0
 
     - name: Terraform Init
-      rrun: terraform init
+      run: terraform init
 
     - name: Terraform Validate
-      rrun: terraform validate
+      run: terraform validate
 
     - name: Terraform Format
       run: terraform fmt -check
