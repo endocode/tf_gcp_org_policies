@@ -20,7 +20,7 @@ variable "org_disable_serial_port_access" {
 
 variable "org_compute_disable_guest_attributes_access" {
   type    = bool
-  default = false
+  default = true
 }
 
 variable "org_vm_external_ip_access" {
