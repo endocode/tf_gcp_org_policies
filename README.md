@@ -13,4 +13,6 @@ module "org_policies" {
 }
 ```
 
+either set org_id or parent_folder -> depening where the policies should be applied.
+
 https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints

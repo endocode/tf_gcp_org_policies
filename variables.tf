@@ -1,11 +1,13 @@
 variable "org_id" {
   description = "Orgnaization ID the policies should be applied on"
   type        = string
+  default     = null
 }
 
 variable "parent_folder" {
   description = "Base folder ID the policies should be applied on"
   type        = string
+  default     = ""
 }
 
 variable "org_disable_nested_virtualization" {
