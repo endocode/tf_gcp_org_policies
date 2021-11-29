@@ -9,6 +9,9 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        terraform-versions: [1.0.0, 1.0.11, latest]
     environment: production
     env: 
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
@@ -23,7 +26,7 @@ jobs:
 
     - uses: hashicorp/setup-terraform@v1
       with:
-        terraform_version: 1.0.0
+        terraform_version: ${{ matrix['terraform-versions'] }}
 
     - name: Terraform Init
       run: terraform init
