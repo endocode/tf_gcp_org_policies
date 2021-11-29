@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        terraform-versions: [1.0.0, 0.11.14, latest]
+        terraform-versions: [1.0.0, 1.0.11, latest]
     environment: production
     env: 
       GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
